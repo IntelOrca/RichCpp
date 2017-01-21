@@ -10,7 +10,7 @@ namespace RichCpp.IntelliSense.QuickInfo
     [Name("RichCpp QuickInfo Source")]
     [Order(After = "Default Quick Info Presenter")]
     [ContentType(ContentTypes.CPlusPlus)]
-    class RichCppQuickInfoSourceProvider : IQuickInfoSourceProvider
+    internal class RichCppQuickInfoSourceProvider : IQuickInfoSourceProvider
     {
         [Import]
         internal ITextStructureNavigatorSelectorService NavigatorService { get; set; }
