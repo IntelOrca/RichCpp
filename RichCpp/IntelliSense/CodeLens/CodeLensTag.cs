@@ -5,17 +5,15 @@ namespace RichCpp.IntelliSense.CodeLens
 {
     internal class CodeLensTag : ICodeLensTag
     {
-        private readonly TestCodeLensDescriptor _descriptor;
-
 #pragma warning disable 67
         public event EventHandler Disconnected;
 #pragma warning restore 67
 
-        public ICodeLensDescriptor Descriptor => _descriptor;
+        public ICodeLensDescriptor Descriptor { get; }
 
-        public CodeLensTag(TestCodeLensDescriptor descriptor)
+        public CodeLensTag(ICodeLensDescriptor descriptor)
         {
-            _descriptor = descriptor;
+            Descriptor = descriptor;
         }
     }
 }

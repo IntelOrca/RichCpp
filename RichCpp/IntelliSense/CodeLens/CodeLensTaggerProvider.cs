@@ -12,9 +12,23 @@ namespace RichCpp.IntelliSense.CodeLens
     [TagType(typeof(ICodeLensTag))]
     internal class CodeLensTaggerProvider : ITaggerProvider
     {
+        [Import]
+        private ITextDocumentFactoryService _textDocumentFactoryService = null;
+
         public ITagger<T> CreateTagger<T>(ITextBuffer buffer) where T : ITag
         {
-            return new CodeLensTagger(buffer) as ITagger<T>;
+            string path = GetFilePath(buffer);
+            return new CodeLensTagger(path, buffer) as ITagger<T>;
+        }
+
+        private string GetFilePath(ITextBuffer buffer)
+        {
+            ITextDocument textDocument;
+            if (_textDocumentFactoryService.TryGetTextDocument(buffer, out textDocument))
+            {
+                return textDocument.FilePath;
+            }
+            return null;
         }
     }
 }
