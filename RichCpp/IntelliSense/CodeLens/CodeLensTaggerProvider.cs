@@ -6,7 +6,9 @@ using Microsoft.VisualStudio.Utilities;
 
 namespace RichCpp.IntelliSense.CodeLens
 {
+#if DEBUG
     [Export(typeof(ITaggerProvider))]
+#endif
     [Name("C/C++ RichCPP CodeLens")]
     [ContentType(ContentTypes.CPlusPlus)]
     [TagType(typeof(ICodeLensTag))]

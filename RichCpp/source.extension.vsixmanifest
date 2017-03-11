@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="RichCpp.Ted John.57ed2864-14b5-4ab2-bb1b-095ddbb39551" Version="1.0" Language="en-US" Publisher="Ted John" />
+    <Identity Id="RichCpp.Ted John.57ed2864-14b5-4ab2-bb1b-095ddbb39551" Version="1.2.2" Language="en-US" Publisher="Ted John" />
     <DisplayName>RichCpp</DisplayName>
     <Description xml:space="preserve">Provides a richer editing experience for C/C++.</Description>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+    <InstallationTarget Version="[15.0,16.0)" Id="Microsoft.VisualStudio.Community" />
   </Installation>
   <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6,)" />
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
   </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio core editor" />
+    <Prerequisite Id="Microsoft.VisualStudio.Component.VC.CoreIde" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio C++ core features" />
+  </Prerequisites>
 </PackageManifest>
