@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="RichCpp.Ted John.57ed2864-14b5-4ab2-bb1b-095ddbb39551" Version="1.2.2" Language="en-US" Publisher="Ted John" />
+    <Identity Id="57ed2864-14b5-4ab2-bb1b-095ddbb39551" Version="1.2.3" Language="en-US" Publisher="Ted John" />
     <DisplayName>RichCpp</DisplayName>
     <Description xml:space="preserve">Provides a richer editing experience for C/C++.</Description>
   </Metadata>
